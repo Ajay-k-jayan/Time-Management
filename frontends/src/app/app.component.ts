@@ -33,6 +33,9 @@ export class AppComponent {
   // succes 
   public succesMessage ="";
 
+  // userid
+  public userId:any;
+
 
   constructor(
     public service: TaskapiService,
@@ -61,6 +64,7 @@ export class AppComponent {
         if((this.UserLists[item].UserName == logins.value.userName) && (this.UserLists[item].Password == logins.value.password)){
           // console.log("Designation",this.UserLists[item].Designation)
           // designation is manger goes to manger dashboard
+          this.userId=this.UserLists[item].UserId;
           if (this.UserLists[item].Designation == "Manager") {
             this.dashboardShow = true;
             this.login = false;

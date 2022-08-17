@@ -50,6 +50,10 @@ export class TaskapiService {
   createUser(data: any): Observable<any> {
     return this.http.post(userurl, data);
   }
+  // get by id user
+  getUserById(id: any): Observable<User> {
+    return this.http.get<User>(`${userurl}${id}`);
+  }
 
   // login and dashboard
   public dashboardDisplay: boolean = false;

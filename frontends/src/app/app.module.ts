@@ -20,6 +20,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { SearchPipe } from './search.pipe';
 // chart
 import { ChartModule } from 'angular2-chartjs';
+import { ProfileComponent } from './profile/profile.component';
 
 
 
@@ -34,7 +35,8 @@ import { ChartModule } from 'angular2-chartjs';
     DashboardComponent,
     SearchPipe,
     ManagertaskComponent,
-    AppManagerSideNavComponent
+    AppManagerSideNavComponent,
+    ProfileComponent
   ],
   imports: [
     BrowserModule,
