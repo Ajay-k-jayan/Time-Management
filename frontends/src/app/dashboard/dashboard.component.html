@@ -1,0 +1,68 @@
+<!-- dashboard -->
+<!-- cards starts-->
+<section class="cards ">
+    <div class="container">
+        <div class="row row-cols-1 row-cols-md-4 g-4 container  m-1 bs-card ">
+            <!--no of total task -->
+            <div class="col py-1">
+                <div class="card h-100 card-bs-bg " style="height:70px">
+
+                    <div class="card-body">
+                        <h5 class="card-title  bs-card-title px-3"><i class="fa-solid fa-bars-progress me-4"></i>Total
+                            Tasks :
+                            {{TaskLists.length}}
+                        </h5>
+                    </div>
+                </div>
+            </div>
+            <!--no of completed task -->
+            <div class="col py-1 ">
+                <div class="card h-100 card-bs-bg">
+                    <div class="card-body ">
+                        <h5 class="card-title  bs-card-title px-3"><i
+                                class="fa-solid fa-circle-check me-3"></i>Completed Tasks:{{totalCompleted}}</h5>
+                    </div>
+                </div>
+            </div>
+            <!--no of  peogress task -->
+            <div class="col py-1">
+                <div class="card h-100 card-bs-bg">
+                    <div class="card-body ">
+                        <h5 class="card-title  bs-card-title px-3"><i class="fa-solid fa-spinner me-4"></i>In Progress:
+                            {{totalProgress}}</h5>
+                    </div>
+                </div>
+            </div>
+            <!-- no of approved tasks -->
+            <div class="col py-1">
+                <div class="card h-100 card-bs-bg">
+                    <div class="card-body ">
+                        <h5 class="card-title  bs-card-title px-3"> <i class="fa-solid fa-thumbs-up me-4"></i>Approved
+                            Tasks:{{totalApproval}}</h5>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+<!-- cards ends -->
+<!-- graph starts -->
+<section class="container ">
+    <div class=" row mx-2">
+        <!-- graph -->
+        <div class="col-lg-6 col-md-12 col-sm-12">
+            <div class="graph-div">
+                <chart class="dashchart" [type]="type" [data]="data" [options]="options"></chart>
+            </div>
+        </div>
+        <!-- doughnut-->
+        <div class="col-lg-6 col-md-12 col-sm-12">
+            <div class="doughnut-div">
+                <chart class="dashchart" [type]="types" [data]="datas" [options]="options2"></chart>
+            </div>
+
+        </div>
+
+    </div>
+</section>

@@ -1,0 +1,35 @@
+<!-- manager side nav bar -->
+<div class="side-nav-content">
+    <ul class="nav-list" [ngClass]="{'nav-list-open': sideNavStatus}">
+
+        <!-- dashboard -->
+        <li class="nav-list-item">
+            <a routerLink="dashboard" aria-current="page">
+                <i class="fa-solid fa-chart-line"></i>
+                <span>
+                    Dashboard
+                </span>
+            </a>
+        </li>
+
+        <!-- task details for employee -->
+        <li class="nav-list-item">
+            <a routerLink="app-managertask">
+                <i class="fa-solid fa-table"></i>
+                <span>
+                    Task Details
+                </span>
+            </a>
+        </li>
+
+        <!-- logout -->
+        <li class="nav-list-item">
+            <a (click)="logOut()">
+                <i class="fa-solid fa-arrow-right-to-bracket"></i>
+                <span>
+                    Logout
+                </span>
+            </a>
+        </li>
+    </ul>
+</div>
